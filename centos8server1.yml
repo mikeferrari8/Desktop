@@ -1,7 +1,18 @@
+# ansible-playbook centos8server1.yml --ask-become-pass
 - hosts: Centos8Test1.mikeslab
   become: true
   tasks:
+  - name: install the 'Gnome desktop' environment group
+    yum:
+      name: "@gnome-desktop"
+      state: present
+
+  - name: install the 'Development tools' package group
+    yum:
+      name: "@Development tools"
+      state: present
+
   - name: Install packages
-    yum: name={{item}}
-    with_items:
-      - mc
+    yum:
+      name: mc
+      state: latest
