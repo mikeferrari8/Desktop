@@ -1,4 +1,4 @@
-- hosts: centos8server1
+- hosts: Centos8Test1.mikeslab
   become: true
   tasks:
   - name: Install packages
