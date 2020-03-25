@@ -4,6 +4,4 @@
   - name: Install packages
     yum: name={{item}}
     with_items:
-      - htop
       - mc
-      - tmux
