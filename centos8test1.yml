@@ -1,0 +1,64 @@
+# ansible-playbook centos8server1.yml --ask-become-pass
+- hosts: centos8test1.mikeslab
+  become: true
+  tasks:
+  - name: Install the 'Workstation' environment group
+    yum:
+      name: "@Workstation"
+      state: present
+  - name: install the 'Workstation' optional group 'GNOME Applications'
+    yum:
+      name: "@GNOME Applications"
+      state: present
+  - name: install the 'Workstation' optional group 'Internet Applications'
+    yum:
+      name: "@Internet Applications"
+      state: present
+  - name: install the 'Workstation' optional group 'Office Suite and Productivity'
+    yum:
+      name: "@Office Suite and Productivity"
+      state: present
+  - name: install the 'Office Suite and Productivity' optional application 'libreoffice-base'
+    yum:
+      name: "libreoffice-base"
+      state: present
+  - name: install the 'Workstation' optional group 'Remote Desktop Clients'
+    yum:
+      name: "@Remote Desktop Clients"
+      state: present
+  - name: Install the 'Container Management' environment group
+    yum:
+      name: "@Container Management"
+      state: present
+  - name: Install the 'Development Tools' environment group
+    yum:
+      name: "@Development Tools"
+      state: present
+  - name: Install the 'Container Management' environment group
+    yum:
+      name: "@Container Management"
+      state: present
+  - name: Install the 'Graphical Administration Tools' environment group
+    yum:
+      name: "@Graphical Administration Tools"
+      state: present
+  - name: Install the 'Graphical Administration Tools' optional application 'gnome-disk-utility'
+    yum:
+      name: "gnome-disk-utility"
+      state: present
+  - name: Install the 'Graphical Administration Tools' optional application 'gnome-disk-utility'
+    yum:
+      name: "gnome-disk-utility"
+      state: present
+  - name: Install the 'Graphical Administration Tools' optional application 'wireshark'
+    yum:
+      name: "wireshark"
+      state: present
+  - name: Install the 'System Tools' environment group
+    yum:
+      name: "@System Tools"
+      state: present
+  - name: Install the 'System Tools' environment group optional application 'mc'
+    yum:
+      name: "mc"
+      state: present
