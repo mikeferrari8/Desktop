@@ -1,4 +1,4 @@
-# ansible-playbook centos8server1.yml --ask-become-pass
+# ansible-playbook centos8test1.yml --ask-become-pass
 - hosts: centos8test1.mikeslab
   become: true
   tasks:
@@ -14,6 +14,10 @@
     yum:
       name: "@Internet Applications"
       state: present
+  - name: install the 'Workstation' optional group 'Remote Desktop Clients'
+    yum:
+      name: "@Remote Desktop Clients"
+      state: present
   - name: install the 'Workstation' optional group 'Office Suite and Productivity'
     yum:
       name: "@Office Suite and Productivity"
@@ -21,10 +25,6 @@
   - name: install the 'Office Suite and Productivity' optional application 'libreoffice-base'
     yum:
       name: "libreoffice-base"
-      state: present
-  - name: install the 'Workstation' optional group 'Remote Desktop Clients'
-    yum:
-      name: "@Remote Desktop Clients"
       state: present
   - name: Install the 'Container Management' environment group
     yum:
@@ -34,17 +34,9 @@
     yum:
       name: "@Development Tools"
       state: present
-  - name: Install the 'Container Management' environment group
-    yum:
-      name: "@Container Management"
-      state: present
-  - name: Install the 'Graphical Administration Tools' environment group
+    - name: Install the 'Graphical Administration Tools' environment group
     yum:
       name: "@Graphical Administration Tools"
-      state: present
-  - name: Install the 'Graphical Administration Tools' optional application 'gnome-disk-utility'
-    yum:
-      name: "gnome-disk-utility"
       state: present
   - name: Install the 'Graphical Administration Tools' optional application 'gnome-disk-utility'
     yum:
