@@ -34,7 +34,7 @@
     yum:
       name: "@Development Tools"
       state: present
-    - name: Install the 'Graphical Administration Tools' environment group
+  - name: Install the 'Graphical Administration Tools' environment group
     yum:
       name: "@Graphical Administration Tools"
       state: present
@@ -54,3 +54,23 @@
     yum:
       name: "mc"
       state: present
+  - name: Install the application 'gnome-tweaks'
+    yum:
+      name: "gnome-tweaks"
+      state: present
+  - name: Install Cockpit Podman 'cockpit-podman'
+    yum:
+      name: "cockpit-podman"
+      state: present
+  - name: Install Cockpit Virtual Machines 'cockpit-machines'
+    yum:
+      name: "cockpit-machines"
+      state: present
+  - name: Install Cockpit Dashboard 'cockpit-dashboard'
+    yum:
+      name: "cockpit-dashboard"
+      state: present
+  - name: enable the service 'Graphical'
+    command: systemctl set-default graphical.target
+  - name: Reboot
+    reboot:
