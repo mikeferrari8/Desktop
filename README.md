@@ -6,28 +6,29 @@ This is a rudimentary ansible playbook that will install all of the apps and con
 2. You like your desktop like i like mine :-)
 
 ### Applications
-`@Workstation
-@Gnome Applications
-@Internet Applications
-@Remote Desktop Clients
-@Office Suite and Productivity
-libreoffice-base
-@Container Management
-@Development Tools
-@Graphical Administration Tools
-gnome-disk-utility
-wireshark
-@System Tools
-mc
-gnome-tweaks
-cockpit-podman
-cockpit-machines
-cockpit-dashboard`
+`@Workstation  
+@Gnome Applications  
+@Internet Applications  
+@Remote Desktop Clients  
+@Office Suite and Productivity  
+libreoffice-base  
+@Container Management  
+@Development Tools  
+@Graphical Administration Tools  
+gnome-disk-utility  
+wireshark  
+@System Tools  
+mc  
+gnome-tweaks  
+cockpit-podman  
+cockpit-machines  
+cockpit-dashboard`  
 
 #### Eventually
-`atom
-gsettings stuff (maybe copy the dconf db?)
-rsync my directory of files off my home server (backed up to google drive/dropbox)
+`atom  
+gsettings stuff (maybe copy the dconf db?)  
+rsync my directory of files off my home server (backed up to google drive/dropbox)`  
 
-and then execute the command to make the gnome desktop the default
-systemctl set-default graphical.target`
+And then execute the command to make the gnome desktop the default  
+`systemctl set-default graphical.target`  
+  
