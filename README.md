@@ -6,11 +6,11 @@ This is a rudimentary ansible playbook that will install all of the apps and con
 2. You like your desktop like i like mine :-)
 
 ### Applications
-`@Workstation\
-@Gnome Applications\
-@Internet Applications\
-@Remote Desktop Clients\
-@Office Suite and Productivity\
+`@Workstation  \
+@Gnome Applications  \
+@Internet Applications  \
+@Remote Desktop Clients
+@Office Suite and Productivity
 libreoffice-base  
 @Container Management  
 @Development Tools  
